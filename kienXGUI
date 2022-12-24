@@ -1,0 +1,70 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Trung Kiên X", "GrapeTheme")
+
+--MAIN
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Info")
+
+Section:NewLabel("Beta Version")
+Section:NewLabel("New Update: 26/12/2022 [UPDATED!]")
+
+--Player
+local plr = Window:NewTab("Player")
+local plr = plr:NewSection("Local Player")
+
+plr:NewSlider("Walk Speed", "Custom Walk Speed", 1000, 16, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+plr:NewSlider("Jump power", "Custom Jump Power", 1000, 50, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+plr:NewSlider("Hip Height", "Custom Hip Height", 100, 2, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
+end)
+
+plr:NewSlider("Gravity", "Custom Gravity", 1000, 100, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.Gravity = s
+end)
+
+plr:NewButton("Reset Value", "Reset all values", function()
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+--Universals
+local uni = Window:NewTab("Universals")
+local uni = uni:NewSection("Admin")
+
+uni:NewButton("Infinite Yield", "Best Admin Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+uni:NewButton("Fate's Admin", "Good Admin Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+uni:NewButton("Reviz Admin", "Bad Admin Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+uni:NewButton("CMD-X", "Good Admin Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+uni:NewButton("Home Brew Admin", "Good Admin Script", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/mgamingpro/HomebrewAdmin/master/Main'),true))()
+end)
+
+uni:NewLabel("Hub")
+
+uni:NewLabel("Comming Soon!")
+
+--Credits
+local cre = Window:NewTab("Credits")
+local cre = cre:NewSection("Credits")
+
+cre:NewLabel("trungkienngu")
