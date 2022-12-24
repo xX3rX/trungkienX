@@ -67,4 +67,4 @@ uni:NewLabel("Comming Soon!")
 local cre = Window:NewTab("Credits")
 local cre = cre:NewSection("Credits")
 
-cre:NewLabel("trungkienngu")
+cre:NewLabel("trungkienX")
